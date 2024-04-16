@@ -14,11 +14,14 @@ def ajouter_tache(taches):
 
 def supprimer_tache(taches):
     afficher_taches(taches)
-    index = int(input("Entrez l'index de la tâche à supprimer : ")) - 1
-    if 0 <= index < len(taches):
-        taches.pop(index)
-        print("Tâche supprimée avec succès.")
-    else:
+    try:
+        index = int(input("Entrez l'index de la tâche à supprimer : ")) - 1
+        if 0 <= index < len(taches):
+            taches.pop(index)
+            print("Tâche supprimée avec succès.")
+        else:
+            print("Index invalide.")
+    except ValueError:
         print("Index invalide.")
 
 def afficher_taches(taches):
