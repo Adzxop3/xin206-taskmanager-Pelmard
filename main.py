@@ -6,7 +6,8 @@ def afficher_menu(taches):
     print("1. Ajouter une tâche")
     print("2. Supprimer une tâche")
     print("3. Marquer une tâche comme terminée")
-    print("4. Quitter")
+    print("4. Afficher les tâches")
+    print("5. Quitter")
 
 if __name__ == "__main__":
     taches = charger_taches()  # Assurez-vous que cette fonction est bien définie pour charger les tâches
@@ -22,6 +23,8 @@ if __name__ == "__main__":
         elif choix == "3":
             marquer_comme_terminee(taches)
         elif choix == "4":
+            afficher_taches(taches)
+        elif choix == "5":
             sauvegarder_taches(taches)
             print("Sortie du gestionnaire de tâches.")
             break

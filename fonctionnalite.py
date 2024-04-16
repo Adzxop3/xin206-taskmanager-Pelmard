@@ -28,3 +28,12 @@ def afficher_taches(taches):
         print("\nListe des tâches :")
         for i, tache in enumerate(taches, start=1):
             print(f"{i}. {tache}")
+
+def marquer_comme_terminee(taches):
+    afficher_taches(taches)
+    index = int(input("Entrez l'index de la tâche terminée : ")) - 1
+    if 0 <= index < len(taches):
+        taches[index] += " (Terminée)"
+        print("Tâche marquée comme terminée avec succès.")
+    else:
+        print("Index invalide.")
