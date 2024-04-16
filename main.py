@@ -1,6 +1,7 @@
 from fonctionnalite import *
 
-def afficher_menu():
+def afficher_menu(taches):
+    afficher_taches(taches)
     print("\nMenu:")
     print("1. Ajouter une tâche")
     print("2. Supprimer une tâche")
@@ -9,12 +10,12 @@ def afficher_menu():
     print("5. Quitter")
 
 if __name__ == "__main__":
-    taches = charger_taches()
-
+    taches = charger_taches()  # Assurez-vous que cette fonction est bien définie pour charger les tâches
+ 
     while True:
-        afficher_menu()
+        afficher_menu(taches)
         choix = input("Entrez votre choix : ")
-
+ 
         if choix == "1":
             ajouter_tache(taches)
         elif choix == "2":
